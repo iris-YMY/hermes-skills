@@ -1,0 +1,6632 @@
+[
+  {
+    "name": "tiktok_web_fetch_post_detail",
+    "description": "获取单个作品数据/Get single video data",
+    "inputSchema": {
+      "properties": {
+        "itemId": {
+          "title": "Itemid",
+          "type": "string"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "itemId"
+      ],
+      "title": "tiktok_web_fetch_post_detailArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_post_detailOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_post_detail_v2",
+    "description": "获取单个作品数据 V2/Get single video data V2",
+    "inputSchema": {
+      "properties": {
+        "itemId": {
+          "title": "Itemid",
+          "type": "string"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "itemId"
+      ],
+      "title": "tiktok_web_fetch_post_detail_v2Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_post_detail_v2Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_explore_post",
+    "description": "获取探索作品数据/Get explore video data",
+    "inputSchema": {
+      "properties": {
+        "categoryType": {
+          "default": "120",
+          "title": "Categorytype",
+          "type": "string"
+        },
+        "count": {
+          "default": 16,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "title": "tiktok_web_fetch_explore_postArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_explore_postOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_trending_searchwords",
+    "description": "获取每日趋势搜索关键词/Get daily trending search words",
+    "inputSchema": {
+      "properties": {},
+      "title": "tiktok_web_fetch_trending_searchwordsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_trending_searchwordsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_user_profile",
+    "description": "获取用户的个人信息/Get user profile",
+    "inputSchema": {
+      "properties": {
+        "uniqueId": {
+          "default": "",
+          "title": "Uniqueid",
+          "type": "string"
+        },
+        "secUid": {
+          "default": "",
+          "title": "Secuid",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_web_fetch_user_profileArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_user_profileOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_user_post",
+    "description": "获取用户的作品列表/Get user posts",
+    "inputSchema": {
+      "properties": {
+        "secUid": {
+          "title": "Secuid",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "coverFormat": {
+          "default": 2,
+          "title": "Coverformat",
+          "type": "integer"
+        },
+        "post_item_list_request_type": {
+          "default": 0,
+          "title": "Post Item List Request Type",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "secUid"
+      ],
+      "title": "tiktok_web_fetch_user_postArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_user_postOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_user_repost",
+    "description": "获取用户的转发作品列表/Get user reposts",
+    "inputSchema": {
+      "properties": {
+        "secUid": {
+          "title": "Secuid",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "coverFormat": {
+          "default": 2,
+          "title": "Coverformat",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "secUid"
+      ],
+      "title": "tiktok_web_fetch_user_repostArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_user_repostOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_user_like",
+    "description": "获取用户的点赞列表/Get user likes",
+    "inputSchema": {
+      "properties": {
+        "secUid": {
+          "title": "Secuid",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "coverFormat": {
+          "default": 2,
+          "title": "Coverformat",
+          "type": "integer"
+        },
+        "post_item_list_request_type": {
+          "default": 0,
+          "title": "Post Item List Request Type",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "secUid"
+      ],
+      "title": "tiktok_web_fetch_user_likeArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_user_likeOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_user_collect",
+    "description": "获取用户的收藏列表/Get user favorites",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "title": "Cookie",
+          "type": "string"
+        },
+        "secUid": {
+          "title": "Secuid",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 30,
+          "title": "Count",
+          "type": "integer"
+        },
+        "coverFormat": {
+          "default": 2,
+          "title": "Coverformat",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "cookie",
+        "secUid"
+      ],
+      "title": "tiktok_web_fetch_user_collectArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_user_collectOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_user_play_list",
+    "description": "获取用户的播放列表/Get user play list",
+    "inputSchema": {
+      "properties": {
+        "secUid": {
+          "title": "Secuid",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 30,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "secUid"
+      ],
+      "title": "tiktok_web_fetch_user_play_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_user_play_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_user_mix",
+    "description": "获取用户的合辑列表/Get user mix list",
+    "inputSchema": {
+      "properties": {
+        "mixId": {
+          "title": "Mixid",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 30,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "mixId"
+      ],
+      "title": "tiktok_web_fetch_user_mixArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_user_mixOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_post_comment",
+    "description": "获取作品的评论列表/Get video comments",
+    "inputSchema": {
+      "properties": {
+        "aweme_id": {
+          "title": "Aweme Id",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "current_region": {
+          "default": "",
+          "title": "Current Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "aweme_id"
+      ],
+      "title": "tiktok_web_fetch_post_commentArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_post_commentOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_post_comment_reply",
+    "description": "获取作品的评论回复列表/Get video comment replies",
+    "inputSchema": {
+      "properties": {
+        "item_id": {
+          "title": "Item Id",
+          "type": "string"
+        },
+        "comment_id": {
+          "title": "Comment Id",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "current_region": {
+          "default": "",
+          "title": "Current Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "item_id",
+        "comment_id"
+      ],
+      "title": "tiktok_web_fetch_post_comment_replyArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_post_comment_replyOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_user_fans",
+    "description": "获取用户的粉丝列表/Get user followers",
+    "inputSchema": {
+      "properties": {
+        "secUid": {
+          "title": "Secuid",
+          "type": "string"
+        },
+        "count": {
+          "default": 30,
+          "title": "Count",
+          "type": "integer"
+        },
+        "maxCursor": {
+          "default": 0,
+          "title": "Maxcursor",
+          "type": "integer"
+        },
+        "minCursor": {
+          "default": 0,
+          "title": "Mincursor",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "secUid"
+      ],
+      "title": "tiktok_web_fetch_user_fansArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_user_fansOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_user_follow",
+    "description": "获取用户的关注列表/Get user followings",
+    "inputSchema": {
+      "properties": {
+        "secUid": {
+          "title": "Secuid",
+          "type": "string"
+        },
+        "count": {
+          "default": 30,
+          "title": "Count",
+          "type": "integer"
+        },
+        "maxCursor": {
+          "default": 0,
+          "title": "Maxcursor",
+          "type": "integer"
+        },
+        "minCursor": {
+          "default": 0,
+          "title": "Mincursor",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "secUid"
+      ],
+      "title": "tiktok_web_fetch_user_followArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_user_followOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_user_live_detail",
+    "description": "获取用户的直播详情/Get user live details",
+    "inputSchema": {
+      "properties": {
+        "uniqueId": {
+          "title": "Uniqueid",
+          "type": "string"
+        }
+      },
+      "required": [
+        "uniqueId"
+      ],
+      "title": "tiktok_web_fetch_user_live_detailArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_user_live_detailOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_general_search",
+    "description": "获取综合搜索列表/Get general search list",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "search_id": {
+          "default": "",
+          "title": "Search Id",
+          "type": "string"
+        },
+        "cookie": {
+          "default": null,
+          "title": "Cookie",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_web_fetch_general_searchArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_general_searchOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_search_keyword_suggest",
+    "description": "搜索关键字推荐/Search keyword suggest",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_web_fetch_search_keyword_suggestArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_search_keyword_suggestOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_search_user",
+    "description": "搜索用户/Search user",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "search_id": {
+          "default": "",
+          "title": "Search Id",
+          "type": "string"
+        },
+        "cookie": {
+          "default": null,
+          "title": "Cookie",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_web_fetch_search_userArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_search_userOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_search_video",
+    "description": "搜索视频/Search video",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "search_id": {
+          "default": "",
+          "title": "Search Id",
+          "type": "string"
+        },
+        "cookie": {
+          "default": null,
+          "title": "Cookie",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_web_fetch_search_videoArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_search_videoOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_search_live",
+    "description": "搜索直播/Search live",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "search_id": {
+          "default": "",
+          "title": "Search Id",
+          "type": "string"
+        },
+        "cookie": {
+          "default": null,
+          "title": "Cookie",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_web_fetch_search_liveArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_search_liveOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_search_photo",
+    "description": "搜索照片/Search photo",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "search_id": {
+          "default": "",
+          "title": "Search Id",
+          "type": "string"
+        },
+        "cookie": {
+          "default": null,
+          "title": "Cookie",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_web_fetch_search_photoArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_search_photoOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_tag_detail",
+    "description": "Tag详情/Tag Detail",
+    "inputSchema": {
+      "properties": {
+        "tag_name": {
+          "title": "Tag Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tag_name"
+      ],
+      "title": "tiktok_web_fetch_tag_detailArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_tag_detailOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_tag_post",
+    "description": "Tag作品/Tag Post",
+    "inputSchema": {
+      "properties": {
+        "challengeID": {
+          "title": "Challengeid",
+          "type": "string"
+        },
+        "count": {
+          "default": 30,
+          "title": "Count",
+          "type": "integer"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "challengeID"
+      ],
+      "title": "tiktok_web_fetch_tag_postArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_tag_postOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_home_feed",
+    "description": "首页推荐作品/Home Feed",
+    "inputSchema": {
+      "properties": {
+        "count": {
+          "default": 15,
+          "title": "Count",
+          "type": "integer"
+        },
+        "cookie": {
+          "default": null,
+          "title": "Cookie",
+          "type": "string"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_web_fetch_home_feedArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_home_feedOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_generate_real_mstoken",
+    "description": "生成真实msToken/Generate real msToken",
+    "inputSchema": {
+      "properties": {
+        "random_strData": {
+          "default": true,
+          "title": "Random Strdata",
+          "type": "boolean"
+        },
+        "browser_type": {
+          "default": null,
+          "title": "Browser Type",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_web_generate_real_mstokenArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_generate_real_mstokenOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_encrypt_strdata",
+    "description": "加密strData/Encrypt strData",
+    "inputSchema": {
+      "properties": {
+        "data": {
+          "title": "Data",
+          "type": "string"
+        }
+      },
+      "required": [
+        "data"
+      ],
+      "title": "tiktok_web_encrypt_strdataArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_encrypt_strdataOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_decrypt_strdata",
+    "description": "解密strData/Decrypt strData",
+    "inputSchema": {
+      "properties": {
+        "encrypted_data": {
+          "title": "Encrypted Data",
+          "type": "string"
+        }
+      },
+      "required": [
+        "encrypted_data"
+      ],
+      "title": "tiktok_web_decrypt_strdataArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_decrypt_strdataOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_generate_fingerprint",
+    "description": "生成浏览器指纹/Generate browser fingerprint",
+    "inputSchema": {
+      "properties": {
+        "browser_type": {
+          "default": null,
+          "title": "Browser Type",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_web_generate_fingerprintArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_generate_fingerprintOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_generate_webid",
+    "description": "生成web_id/Generate web_id",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": null,
+          "title": "Cookie",
+          "type": "string"
+        },
+        "user_agent": {
+          "default": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:145.0) Gecko/20100101 Firefox/145.0",
+          "title": "User Agent",
+          "type": "string"
+        },
+        "url": {
+          "default": "https://www.tiktok.com/explore",
+          "title": "Url",
+          "type": "string"
+        },
+        "referer": {
+          "default": "",
+          "title": "Referer",
+          "type": "string"
+        },
+        "user_unique_id": {
+          "default": "",
+          "title": "User Unique Id",
+          "type": "string"
+        },
+        "app_id": {
+          "default": 1988,
+          "title": "App Id",
+          "type": "integer"
+        }
+      },
+      "title": "tiktok_web_generate_webidArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_generate_webidOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_generate_ttwid",
+    "description": "生成ttwid/Generate ttwid",
+    "inputSchema": {
+      "properties": {
+        "user_agent": {
+          "default": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0",
+          "title": "User Agent",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_web_generate_ttwidArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_generate_ttwidOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_generate_xbogus",
+    "description": "生成 XBogus/Generate XBogus",
+    "inputSchema": {
+      "properties": {
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "user_agent": {
+          "title": "User Agent",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "user_agent"
+      ],
+      "title": "tiktok_web_generate_xbogusArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_generate_xbogusOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_generate_xgnarly",
+    "description": "生成 XGnarly /Generate XGnarly",
+    "inputSchema": {
+      "properties": {
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "body": {
+          "default": "",
+          "title": "Body",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "title": "tiktok_web_generate_xgnarlyArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_generate_xgnarlyOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_generate_xgnarly_and_xbogus",
+    "description": "生成 XGnarly 和 XBogus /Generate XGnarly and XBogus",
+    "inputSchema": {
+      "properties": {
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "body": {
+          "default": "",
+          "title": "Body",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "title": "tiktok_web_generate_xgnarly_and_xbogusArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_generate_xgnarly_and_xbogusOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_generate_x_mssdk_info",
+    "description": "生成 X-Mssdk-Info /Generate X-Mssdk-Info",
+    "inputSchema": {
+      "properties": {
+        "user_agent": {
+          "default": null,
+          "title": "User Agent",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_web_generate_x_mssdk_infoArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_generate_x_mssdk_infoOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_get_user_id",
+    "description": "提取用户user_id/Extract user user_id",
+    "inputSchema": {
+      "properties": {
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "title": "tiktok_web_get_user_idArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_get_user_idOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_get_sec_user_id",
+    "description": "提取用户sec_user_id/Extract user sec_user_id",
+    "inputSchema": {
+      "properties": {
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "title": "tiktok_web_get_sec_user_idArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_get_sec_user_idOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_get_all_sec_user_id",
+    "description": "提取列表用户sec_user_id/Extract list user sec_user_id",
+    "inputSchema": {
+      "properties": {},
+      "title": "tiktok_web_get_all_sec_user_idArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_get_all_sec_user_idOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_get_aweme_id",
+    "description": "提取单个作品id/Extract single video id",
+    "inputSchema": {
+      "properties": {
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "title": "tiktok_web_get_aweme_idArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_get_aweme_idOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_get_all_aweme_id",
+    "description": "提取列表作品id/Extract list video id",
+    "inputSchema": {
+      "properties": {},
+      "title": "tiktok_web_get_all_aweme_idArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_get_all_aweme_idOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_get_unique_id",
+    "description": "获取用户unique_id/Get user unique_id",
+    "inputSchema": {
+      "properties": {
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "title": "tiktok_web_get_unique_idArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_get_unique_idOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_get_all_unique_id",
+    "description": "获取列表unique_id/Get list unique_id",
+    "inputSchema": {
+      "properties": {},
+      "title": "tiktok_web_get_all_unique_idArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_get_all_unique_idOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_tiktok_live_room",
+    "description": "提取直播间弹幕/Extract live room danmaku",
+    "inputSchema": {
+      "properties": {
+        "live_room_url": {
+          "title": "Live Room Url",
+          "type": "string"
+        },
+        "danmaku_type": {
+          "title": "Danmaku Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "live_room_url",
+        "danmaku_type"
+      ],
+      "title": "tiktok_web_tiktok_live_roomArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_tiktok_live_roomOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_live_im_fetch",
+    "description": "TikTok直播间弹幕参数获取/tiktok live room danmaku parameters",
+    "inputSchema": {
+      "properties": {
+        "room_id": {
+          "title": "Room Id",
+          "type": "string"
+        },
+        "user_unique_id": {
+          "default": null,
+          "title": "User Unique Id",
+          "type": "string"
+        },
+        "resp_content_type": {
+          "default": "protobuf",
+          "title": "Resp Content Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "room_id"
+      ],
+      "title": "tiktok_web_fetch_live_im_fetchArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_live_im_fetchOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_generate_wss_xb_signature",
+    "description": "生成TikTok WSS X-Bogus签名/Generate TikTok WSS X-Bogus signature",
+    "inputSchema": {
+      "properties": {
+        "user_agent": {
+          "default": null,
+          "title": "User Agent",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_web_generate_wss_xb_signatureArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_generate_wss_xb_signatureOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_get_live_room_id",
+    "description": "根据直播间链接提取直播间ID/Extract live room ID from live room link",
+    "inputSchema": {
+      "properties": {
+        "live_room_url": {
+          "title": "Live Room Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "live_room_url"
+      ],
+      "title": "tiktok_web_get_live_room_idArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_get_live_room_idOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_check_live_alive",
+    "description": "直播间开播状态检测/Live room start status check",
+    "inputSchema": {
+      "properties": {
+        "room_id": {
+          "title": "Room Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "room_id"
+      ],
+      "title": "tiktok_web_fetch_check_live_aliveArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_check_live_aliveOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_batch_check_live_alive",
+    "description": "批量直播间开播状态检测/Batch live room start status check",
+    "inputSchema": {
+      "properties": {
+        "room_ids": {
+          "title": "Room Ids",
+          "type": "string"
+        }
+      },
+      "required": [
+        "room_ids"
+      ],
+      "title": "tiktok_web_fetch_batch_check_live_aliveArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_batch_check_live_aliveOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_tiktok_live_data",
+    "description": "通过直播链接获取直播间信息/Get live room information via live link",
+    "inputSchema": {
+      "properties": {
+        "live_room_url": {
+          "title": "Live Room Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "live_room_url"
+      ],
+      "title": "tiktok_web_fetch_tiktok_live_dataArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_tiktok_live_dataOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_live_recommend",
+    "description": "获取直播间首页推荐列表/Get live room homepage recommendation list",
+    "inputSchema": {
+      "properties": {
+        "related_live_tag": {
+          "title": "Related Live Tag",
+          "type": "string"
+        }
+      },
+      "required": [
+        "related_live_tag"
+      ],
+      "title": "tiktok_web_fetch_live_recommendArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_live_recommendOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_live_recommend_tabs",
+    "description": "获取直播间首页推荐可用标签/Get available tags for live room homepage recommendation",
+    "inputSchema": {
+      "properties": {
+        "logid": {
+          "default": "",
+          "title": "Logid",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_web_fetch_live_recommend_tabsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_live_recommend_tabsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_live_gift_list",
+    "description": "获取直播间礼物列表/Get live room gift list",
+    "inputSchema": {
+      "properties": {
+        "room_id": {
+          "default": "",
+          "title": "Room Id",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_web_fetch_live_gift_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_live_gift_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_generate_hashed_id",
+    "description": "生成哈希ID/Generate hashed ID",
+    "inputSchema": {
+      "properties": {
+        "email": {
+          "title": "Email",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email"
+      ],
+      "title": "tiktok_web_generate_hashed_idArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_generate_hashed_idOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_gift_name_by_id",
+    "description": "根据Gift ID查询礼物名称/Get gift name by gift ID",
+    "inputSchema": {
+      "properties": {
+        "gift_id": {
+          "title": "Gift Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "gift_id"
+      ],
+      "title": "tiktok_web_fetch_gift_name_by_idArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_gift_name_by_idOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_gift_names_by_ids",
+    "description": "批量查询Gift ID对应的礼物名称($0.025/次,建议50个)/Batch get gift names by gift IDs ($0.025/call, suggest 50)",
+    "inputSchema": {
+      "properties": {
+        "gift_ids": {
+          "items": {},
+          "title": "Gift Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "gift_ids"
+      ],
+      "title": "tiktok_web_fetch_gift_names_by_idsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_gift_names_by_idsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_fetch_tiktok_web_guest_cookie",
+    "description": "获取游客 Cookie/Get the guest Cookie",
+    "inputSchema": {
+      "properties": {
+        "user_agent": {
+          "title": "User Agent",
+          "type": "string"
+        }
+      },
+      "required": [
+        "user_agent"
+      ],
+      "title": "tiktok_web_fetch_tiktok_web_guest_cookieArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_fetch_tiktok_web_guest_cookieOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_web_device_register",
+    "description": "设备注册/Register device for TikTok Web",
+    "inputSchema": {
+      "properties": {},
+      "title": "tiktok_web_device_registerArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_web_device_registerOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_one_video",
+    "description": "获取单个作品数据/Get single video data",
+    "inputSchema": {
+      "properties": {
+        "aweme_id": {
+          "title": "Aweme Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "aweme_id"
+      ],
+      "title": "tiktok_app_v3_fetch_one_videoArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_one_videoOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_one_video_v2",
+    "description": "获取单个作品数据 V2/Get single video data V2",
+    "inputSchema": {
+      "properties": {
+        "aweme_id": {
+          "title": "Aweme Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "aweme_id"
+      ],
+      "title": "tiktok_app_v3_fetch_one_video_v2Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_one_video_v2Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_one_video_v3",
+    "description": "获取单个作品数据 V3(支持国家参数)/Get single video data V3 (support country parameter)",
+    "inputSchema": {
+      "properties": {
+        "aweme_id": {
+          "title": "Aweme Id",
+          "type": "string"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "aweme_id"
+      ],
+      "title": "tiktok_app_v3_fetch_one_video_v3Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_one_video_v3Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_multi_video",
+    "description": "批量获取视频信息/Batch Get Video Information",
+    "inputSchema": {
+      "properties": {},
+      "title": "tiktok_app_v3_fetch_multi_videoArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_multi_videoOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_multi_video_v2",
+    "description": "批量获取视频信息 V2/Batch Get Video Information V2",
+    "inputSchema": {
+      "properties": {},
+      "title": "tiktok_app_v3_fetch_multi_video_v2Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_multi_video_v2Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_one_video_by_share_url_v2",
+    "description": "根据分享链接获取单个作品数据/Get single video data by sharing link",
+    "inputSchema": {
+      "properties": {
+        "share_url": {
+          "title": "Share Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "share_url"
+      ],
+      "title": "tiktok_app_v3_fetch_one_video_by_share_url_v2Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_one_video_by_share_url_v2Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_one_video_by_share_url",
+    "description": "根据分享链接获取单个作品数据/Get single video data by sharing link",
+    "inputSchema": {
+      "properties": {
+        "share_url": {
+          "title": "Share Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "share_url"
+      ],
+      "title": "tiktok_app_v3_fetch_one_video_by_share_urlArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_one_video_by_share_urlOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_get_user_id_and_sec_user_id_by_username",
+    "description": "使用用户名获取用户 user_id 和 sec_user_id/Get user_id and sec_user_id by Username",
+    "inputSchema": {
+      "properties": {
+        "username": {
+          "title": "Username",
+          "type": "string"
+        }
+      },
+      "required": [
+        "username"
+      ],
+      "title": "tiktok_app_v3_get_user_id_and_sec_user_id_by_usernameArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_get_user_id_and_sec_user_id_by_usernameOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_handler_user_profile",
+    "description": "获取指定用户的信息/Get information of specified user",
+    "inputSchema": {
+      "properties": {
+        "user_id": {
+          "default": "",
+          "title": "User Id",
+          "type": "string"
+        },
+        "sec_user_id": {
+          "default": "",
+          "title": "Sec User Id",
+          "type": "string"
+        },
+        "unique_id": {
+          "default": "",
+          "title": "Unique Id",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_app_v3_handler_user_profileArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_handler_user_profileOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_webcast_user_info",
+    "description": "获取指定 Webcast 用户的信息/Get information of specified Webcast user",
+    "inputSchema": {
+      "properties": {
+        "user_id": {
+          "default": "",
+          "title": "User Id",
+          "type": "string"
+        },
+        "sec_user_id": {
+          "default": "",
+          "title": "Sec User Id",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_app_v3_fetch_webcast_user_infoArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_webcast_user_infoOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_user_country_by_username",
+    "description": "通过用户名获取用户账号国家地区/Get user account country by username",
+    "inputSchema": {
+      "properties": {
+        "username": {
+          "title": "Username",
+          "type": "string"
+        }
+      },
+      "required": [
+        "username"
+      ],
+      "title": "tiktok_app_v3_fetch_user_country_by_usernameArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_user_country_by_usernameOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_similar_user_recommendations",
+    "description": "获取类似用户推荐/Similar User Recommendations",
+    "inputSchema": {
+      "properties": {
+        "sec_uid": {
+          "title": "Sec Uid",
+          "type": "string"
+        },
+        "page_token": {
+          "default": "",
+          "title": "Page Token",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sec_uid"
+      ],
+      "title": "tiktok_app_v3_fetch_similar_user_recommendationsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_similar_user_recommendationsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_user_repost_videos",
+    "description": "获取用户转发的作品数据/Get user repost video data",
+    "inputSchema": {
+      "properties": {
+        "user_id": {
+          "title": "User Id",
+          "type": "integer"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "count": {
+          "default": 21,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "user_id"
+      ],
+      "title": "tiktok_app_v3_fetch_user_repost_videosArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_user_repost_videosOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_user_post_videos",
+    "description": "获取用户主页作品数据 V1/Get user homepage video data V1",
+    "inputSchema": {
+      "properties": {
+        "sec_user_id": {
+          "default": "",
+          "title": "Sec User Id",
+          "type": "string"
+        },
+        "unique_id": {
+          "default": "",
+          "title": "Unique Id",
+          "type": "string"
+        },
+        "max_cursor": {
+          "default": 0,
+          "title": "Max Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "sort_type": {
+          "default": 0,
+          "title": "Sort Type",
+          "type": "integer"
+        },
+        "region": {
+          "default": "",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_app_v3_fetch_user_post_videosArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_user_post_videosOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_user_post_videos_v2",
+    "description": "获取用户主页作品数据 V2/Get user homepage video data V2",
+    "inputSchema": {
+      "properties": {
+        "sec_user_id": {
+          "default": "",
+          "title": "Sec User Id",
+          "type": "string"
+        },
+        "unique_id": {
+          "default": "",
+          "title": "Unique Id",
+          "type": "string"
+        },
+        "max_cursor": {
+          "default": 0,
+          "title": "Max Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "sort_type": {
+          "default": 0,
+          "title": "Sort Type",
+          "type": "integer"
+        }
+      },
+      "title": "tiktok_app_v3_fetch_user_post_videos_v2Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_user_post_videos_v2Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_user_post_videos_v3",
+    "description": "获取用户主页作品数据 V3（精简数据-更快速）/Get user homepage video data V3 (simplified data - faster)",
+    "inputSchema": {
+      "properties": {
+        "sec_user_id": {
+          "default": "",
+          "title": "Sec User Id",
+          "type": "string"
+        },
+        "unique_id": {
+          "default": "",
+          "title": "Unique Id",
+          "type": "string"
+        },
+        "max_cursor": {
+          "default": 0,
+          "title": "Max Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "sort_type": {
+          "default": 0,
+          "title": "Sort Type",
+          "type": "integer"
+        }
+      },
+      "title": "tiktok_app_v3_fetch_user_post_videos_v3Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_user_post_videos_v3Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_user_like_videos",
+    "description": "获取用户喜欢作品数据/Get user like video data",
+    "inputSchema": {
+      "properties": {
+        "sec_user_id": {
+          "title": "Sec User Id",
+          "type": "string"
+        },
+        "max_cursor": {
+          "default": 0,
+          "title": "Max Cursor",
+          "type": "integer"
+        },
+        "counts": {
+          "default": 20,
+          "title": "Counts",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "sec_user_id"
+      ],
+      "title": "tiktok_app_v3_fetch_user_like_videosArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_user_like_videosOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_video_comments",
+    "description": "获取单个视频评论数据/Get single video comments data",
+    "inputSchema": {
+      "properties": {
+        "aweme_id": {
+          "title": "Aweme Id",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "aweme_id"
+      ],
+      "title": "tiktok_app_v3_fetch_video_commentsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_video_commentsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_video_comment_replies",
+    "description": "获取指定视频的评论回复数据/Get comment replies data of specified video",
+    "inputSchema": {
+      "properties": {
+        "item_id": {
+          "title": "Item Id",
+          "type": "string"
+        },
+        "comment_id": {
+          "title": "Comment Id",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "item_id",
+        "comment_id"
+      ],
+      "title": "tiktok_app_v3_fetch_video_comment_repliesArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_video_comment_repliesOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_general_search_result",
+    "description": "获取指定关键词的综合搜索结果/Get comprehensive search results of specified keywords",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "sort_type": {
+          "default": 0,
+          "title": "Sort Type",
+          "type": "integer"
+        },
+        "publish_time": {
+          "default": 0,
+          "title": "Publish Time",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_app_v3_fetch_general_search_resultArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_general_search_resultOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_video_search_result",
+    "description": "获取指定关键词的视频搜索结果/Get video search results of specified keywords",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "sort_type": {
+          "default": 0,
+          "title": "Sort Type",
+          "type": "integer"
+        },
+        "publish_time": {
+          "default": 0,
+          "title": "Publish Time",
+          "type": "integer"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_app_v3_fetch_video_search_resultArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_video_search_resultOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_user_search_result",
+    "description": "获取指定关键词的用户搜索结果/Get user search results of specified keywords",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "user_search_follower_count": {
+          "default": "",
+          "title": "User Search Follower Count",
+          "type": "string"
+        },
+        "user_search_profile_type": {
+          "default": "",
+          "title": "User Search Profile Type",
+          "type": "string"
+        },
+        "user_search_other_pref": {
+          "default": "",
+          "title": "User Search Other Pref",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_app_v3_fetch_user_search_resultArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_user_search_resultOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_music_search_result",
+    "description": "获取指定关键词的音乐搜索结果/Get music search results of specified keywords",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "filter_by": {
+          "default": 0,
+          "title": "Filter By",
+          "type": "integer"
+        },
+        "sort_type": {
+          "default": 0,
+          "title": "Sort Type",
+          "type": "integer"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_app_v3_fetch_music_search_resultArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_music_search_resultOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_hashtag_search_result",
+    "description": "获取指定关键词的话题搜索结果/Get hashtag search results of specified keywords",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_app_v3_fetch_hashtag_search_resultArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_hashtag_search_resultOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_live_search_result",
+    "description": "获取指定关键词的直播搜索结果/Get live search results of specified keywords",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_app_v3_fetch_live_search_resultArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_live_search_resultOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_location_search",
+    "description": "获取地点搜索结果/Get location search results",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_app_v3_fetch_location_searchArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_location_searchOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_music_detail",
+    "description": "获取指定音乐的详情数据/Get details of specified music",
+    "inputSchema": {
+      "properties": {
+        "music_id": {
+          "title": "Music Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "music_id"
+      ],
+      "title": "tiktok_app_v3_fetch_music_detailArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_music_detailOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_music_video_list",
+    "description": "获取指定音乐的视频列表数据/Get video list of specified music",
+    "inputSchema": {
+      "properties": {
+        "music_id": {
+          "title": "Music Id",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 10,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "music_id"
+      ],
+      "title": "tiktok_app_v3_fetch_music_video_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_music_video_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_hashtag_detail",
+    "description": "获取指定话题的详情数据/Get details of specified hashtag",
+    "inputSchema": {
+      "properties": {
+        "ch_id": {
+          "title": "Ch Id",
+          "type": "string"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ch_id"
+      ],
+      "title": "tiktok_app_v3_fetch_hashtag_detailArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_hashtag_detailOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_hashtag_video_list",
+    "description": "获取指定话题的作品数据/Get video list of specified hashtag",
+    "inputSchema": {
+      "properties": {
+        "ch_id": {
+          "title": "Ch Id",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 10,
+          "title": "Count",
+          "type": "integer"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ch_id"
+      ],
+      "title": "tiktok_app_v3_fetch_hashtag_video_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_hashtag_video_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_user_follower_list",
+    "description": "获取指定用户的粉丝列表数据/Get follower list of specified user",
+    "inputSchema": {
+      "properties": {
+        "user_id": {
+          "default": "",
+          "title": "User Id",
+          "type": "string"
+        },
+        "sec_user_id": {
+          "default": "",
+          "title": "Sec User Id",
+          "type": "string"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "min_time": {
+          "default": 0,
+          "title": "Min Time",
+          "type": "integer"
+        },
+        "page_token": {
+          "default": "",
+          "title": "Page Token",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_app_v3_fetch_user_follower_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_user_follower_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_user_following_list",
+    "description": "获取指定用户的关注列表数据/Get following list of specified user",
+    "inputSchema": {
+      "properties": {
+        "user_id": {
+          "default": "",
+          "title": "User Id",
+          "type": "string"
+        },
+        "sec_user_id": {
+          "default": "",
+          "title": "Sec User Id",
+          "type": "string"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "min_time": {
+          "default": 0,
+          "title": "Min Time",
+          "type": "integer"
+        },
+        "page_token": {
+          "default": "",
+          "title": "Page Token",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_app_v3_fetch_user_following_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_user_following_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_creator_search_insights",
+    "description": "创作者搜索洞察/Creator Search Insights",
+    "inputSchema": {
+      "properties": {
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "limit": {
+          "default": 20,
+          "title": "Limit",
+          "type": "integer"
+        },
+        "tab": {
+          "default": "all",
+          "title": "Tab",
+          "type": "string"
+        },
+        "language_filters": {
+          "default": "en",
+          "title": "Language Filters",
+          "type": "string"
+        },
+        "category_filters": {
+          "default": "",
+          "title": "Category Filters",
+          "type": "string"
+        },
+        "creator_source": {
+          "default": "general_search",
+          "title": "Creator Source",
+          "type": "string"
+        },
+        "force_refresh": {
+          "default": true,
+          "title": "Force Refresh",
+          "type": "boolean"
+        }
+      },
+      "title": "tiktok_app_v3_fetch_creator_search_insightsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_creator_search_insightsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_creator_search_insights_detail",
+    "description": "创作者搜索洞察详情/Creator Search Insights Detail",
+    "inputSchema": {
+      "properties": {
+        "query_id_str": {
+          "title": "Query Id Str",
+          "type": "string"
+        },
+        "time_range": {
+          "default": "past_30_days",
+          "title": "Time Range",
+          "type": "string"
+        },
+        "start_date": {
+          "default": null,
+          "title": "Start Date",
+          "type": "integer"
+        },
+        "end_date": {
+          "default": null,
+          "title": "End Date",
+          "type": "integer"
+        },
+        "dimension_list": {
+          "default": "gender,age,country",
+          "title": "Dimension List",
+          "type": "string"
+        }
+      },
+      "required": [
+        "query_id_str"
+      ],
+      "title": "tiktok_app_v3_fetch_creator_search_insights_detailArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_creator_search_insights_detailOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_creator_search_insights_trend",
+    "description": "创作者搜索洞察趋势/Creator Search Insights Trend",
+    "inputSchema": {
+      "properties": {
+        "query_id_str": {
+          "title": "Query Id Str",
+          "type": "string"
+        },
+        "from_tab_path": {
+          "default": "TRENDING,TOPICS",
+          "title": "From Tab Path",
+          "type": "string"
+        },
+        "query_analysis_required": {
+          "default": true,
+          "title": "Query Analysis Required",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "query_id_str"
+      ],
+      "title": "tiktok_app_v3_fetch_creator_search_insights_trendArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_creator_search_insights_trendOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_creator_search_insights_videos",
+    "description": "创作者搜索洞察相关视频/Creator Search Insights Videos",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_app_v3_fetch_creator_search_insights_videosArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_creator_search_insights_videosOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_music_chart_list",
+    "description": "音乐排行榜/Music Chart List",
+    "inputSchema": {
+      "properties": {
+        "scene": {
+          "default": 0,
+          "title": "Scene",
+          "type": "integer"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 50,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "title": "tiktok_app_v3_fetch_music_chart_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_music_chart_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_search_follower_list",
+    "description": "搜索粉丝列表/Search follower list",
+    "inputSchema": {
+      "properties": {
+        "user_id": {
+          "title": "User Id",
+          "type": "string"
+        },
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        }
+      },
+      "required": [
+        "user_id",
+        "keyword"
+      ],
+      "title": "tiktok_app_v3_search_follower_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_search_follower_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_search_following_list",
+    "description": "搜索关注列表/Search following list",
+    "inputSchema": {
+      "properties": {
+        "user_id": {
+          "title": "User Id",
+          "type": "string"
+        },
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        }
+      },
+      "required": [
+        "user_id",
+        "keyword"
+      ],
+      "title": "tiktok_app_v3_search_following_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_search_following_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_live_room_info",
+    "description": "获取指定直播间的数据/Get data of specified live room",
+    "inputSchema": {
+      "properties": {
+        "room_id": {
+          "title": "Room Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "room_id"
+      ],
+      "title": "tiktok_app_v3_fetch_live_room_infoArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_live_room_infoOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_live_ranking_list",
+    "description": "获取直播间排行榜数据/Get live room ranking list",
+    "inputSchema": {
+      "properties": {
+        "room_id": {
+          "title": "Room Id",
+          "type": "string"
+        },
+        "anchor_id": {
+          "title": "Anchor Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "room_id",
+        "anchor_id"
+      ],
+      "title": "tiktok_app_v3_fetch_live_ranking_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_live_ranking_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_check_live_room_online",
+    "description": "检测直播间是否在线/Check if live room is online",
+    "inputSchema": {
+      "properties": {
+        "room_id": {
+          "title": "Room Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "room_id"
+      ],
+      "title": "tiktok_app_v3_check_live_room_onlineArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_check_live_room_onlineOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_check_live_room_online_batch",
+    "description": "批量检测直播间是否在线/Batch check if live rooms are online",
+    "inputSchema": {
+      "properties": {
+        "room_ids": {
+          "default": [
+            "[",
+            "'",
+            "7",
+            "4",
+            "9",
+            "4",
+            "4",
+            "9",
+            "1",
+            "9",
+            "3",
+            "3",
+            "7",
+            "8",
+            "1",
+            "0",
+            "0",
+            "3",
+            "0",
+            "5",
+            "4",
+            "'",
+            ",",
+            " ",
+            "'",
+            "7",
+            "4",
+            "9",
+            "4",
+            "5",
+            "1",
+            "4",
+            "9",
+            "2",
+            "5",
+            "0",
+            "3",
+            "4",
+            "1",
+            "1",
+            "3",
+            "8",
+            "3",
+            "5",
+            "'",
+            ",",
+            " ",
+            "'",
+            "7",
+            "4",
+            "9",
+            "4",
+            "5",
+            "2",
+            "0",
+            "5",
+            "9",
+            "0",
+            "5",
+            "2",
+            "3",
+            "5",
+            "1",
+            "7",
+            "7",
+            "3",
+            "9",
+            "'",
+            "]"
+          ],
+          "items": {},
+          "title": "Room Ids",
+          "type": "array"
+        }
+      },
+      "title": "tiktok_app_v3_check_live_room_online_batchArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_check_live_room_online_batchOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_share_short_link",
+    "description": "获取分享短链接/Get share short link",
+    "inputSchema": {
+      "properties": {
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "title": "tiktok_app_v3_fetch_share_short_linkArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_share_short_linkOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_share_qr_code",
+    "description": "获取分享二维码/Get share QR code",
+    "inputSchema": {
+      "properties": {
+        "object_id": {
+          "title": "Object Id",
+          "type": "string"
+        },
+        "schema_type": {
+          "default": 4,
+          "title": "Schema Type",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "object_id"
+      ],
+      "title": "tiktok_app_v3_fetch_share_qr_codeArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_share_qr_codeOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_product_search",
+    "description": "获取商品搜索结果/Get product search results",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 12,
+          "title": "Count",
+          "type": "integer"
+        },
+        "sort_type": {
+          "default": 1,
+          "title": "Sort Type",
+          "type": "integer"
+        },
+        "customer_review_four_star": {
+          "default": true,
+          "title": "Customer Review Four Star",
+          "type": "boolean"
+        },
+        "have_discount": {
+          "default": true,
+          "title": "Have Discount",
+          "type": "boolean"
+        },
+        "min_price": {
+          "default": "",
+          "title": "Min Price",
+          "type": "string"
+        },
+        "max_price": {
+          "default": "",
+          "title": "Max Price",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_app_v3_fetch_product_searchArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_product_searchOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_creator_info",
+    "description": "获取带货创作者信息/Get shopping creator information",
+    "inputSchema": {
+      "properties": {
+        "creator_uid": {
+          "title": "Creator Uid",
+          "type": "string"
+        }
+      },
+      "required": [
+        "creator_uid"
+      ],
+      "title": "tiktok_app_v3_fetch_creator_infoArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_creator_infoOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_creator_showcase_product_list",
+    "description": "获取创作者橱窗商品列表/Get creator showcase product list",
+    "inputSchema": {
+      "properties": {
+        "kol_id": {
+          "title": "Kol Id",
+          "type": "string"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "next_scroll_param": {
+          "default": "",
+          "title": "Next Scroll Param",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kol_id"
+      ],
+      "title": "tiktok_app_v3_fetch_creator_showcase_product_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_creator_showcase_product_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_shop_id_by_share_link",
+    "description": "通过分享链接获取店铺ID/Get Shop ID by Share Link",
+    "inputSchema": {
+      "properties": {
+        "share_link": {
+          "title": "Share Link",
+          "type": "string"
+        }
+      },
+      "required": [
+        "share_link"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_id_by_share_linkArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_id_by_share_linkOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_product_id_by_share_link",
+    "description": "通过分享链接获取商品ID/Get Product ID by Share Link",
+    "inputSchema": {
+      "properties": {
+        "share_link": {
+          "title": "Share Link",
+          "type": "string"
+        }
+      },
+      "required": [
+        "share_link"
+      ],
+      "title": "tiktok_app_v3_fetch_product_id_by_share_linkArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_product_id_by_share_linkOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_product_detail",
+    "description": "获取商品详情数据（即将弃用，使用 fetch_product_detail_v2 代替）/Get product detail data (will be deprecated, use fetch_product_detail_v2 instead)",
+    "inputSchema": {
+      "properties": {
+        "product_id": {
+          "title": "Product Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_id"
+      ],
+      "title": "tiktok_app_v3_fetch_product_detailArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_product_detailOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_product_detail_v2",
+    "description": "获取商品详情数据V2/Get product detail data V2",
+    "inputSchema": {
+      "properties": {
+        "product_id": {
+          "title": "Product Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_id"
+      ],
+      "title": "tiktok_app_v3_fetch_product_detail_v2Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_product_detail_v2Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_product_detail_v3",
+    "description": "获取商品详情数据V3 / Get product detail data V3",
+    "inputSchema": {
+      "properties": {
+        "product_id": {
+          "title": "Product Id",
+          "type": "string"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_id"
+      ],
+      "title": "tiktok_app_v3_fetch_product_detail_v3Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_product_detail_v3Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_product_detail_v4",
+    "description": "获取商品详情数据V4 / Get product detail data V4",
+    "inputSchema": {
+      "properties": {
+        "product_id": {
+          "title": "Product Id",
+          "type": "string"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_id"
+      ],
+      "title": "tiktok_app_v3_fetch_product_detail_v4Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_product_detail_v4Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_product_review",
+    "description": "获取商品评价数据/Get product review data",
+    "inputSchema": {
+      "properties": {
+        "product_id": {
+          "title": "Product Id",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "size": {
+          "default": 10,
+          "title": "Size",
+          "type": "integer"
+        },
+        "filter_id": {
+          "default": 0,
+          "title": "Filter Id",
+          "type": "integer"
+        },
+        "sort_type": {
+          "default": 0,
+          "title": "Sort Type",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "product_id"
+      ],
+      "title": "tiktok_app_v3_fetch_product_reviewArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_product_reviewOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_shop_home_page_list",
+    "description": "获取商家主页Page列表数据/Get shop home page list data",
+    "inputSchema": {
+      "properties": {
+        "seller_id": {
+          "title": "Seller Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "seller_id"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_home_page_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_home_page_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_shop_home",
+    "description": "获取商家主页数据/Get shop home page data",
+    "inputSchema": {
+      "properties": {
+        "page_id": {
+          "title": "Page Id",
+          "type": "string"
+        },
+        "seller_id": {
+          "title": "Seller Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "page_id",
+        "seller_id"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_homeArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_homeOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_shop_product_recommend",
+    "description": "获取商家商品推荐数据/Get shop product recommend data",
+    "inputSchema": {
+      "properties": {
+        "seller_id": {
+          "title": "Seller Id",
+          "type": "string"
+        },
+        "scroll_param": {
+          "default": "",
+          "title": "Scroll Param",
+          "type": "string"
+        },
+        "page_size": {
+          "default": 10,
+          "title": "Page Size",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "seller_id"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_product_recommendArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_product_recommendOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_shop_product_list",
+    "description": "获取商家商品列表数据/Get shop product list data",
+    "inputSchema": {
+      "properties": {
+        "seller_id": {
+          "title": "Seller Id",
+          "type": "string"
+        },
+        "scroll_params": {
+          "default": "",
+          "title": "Scroll Params",
+          "type": "string"
+        },
+        "page_size": {
+          "default": 10,
+          "title": "Page Size",
+          "type": "integer"
+        },
+        "sort_field": {
+          "default": 1,
+          "title": "Sort Field",
+          "type": "integer"
+        },
+        "sort_order": {
+          "default": 0,
+          "title": "Sort Order",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "seller_id"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_product_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_product_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_shop_product_list_v2",
+    "description": "获取商家商品列表数据 V2/Get shop product list data V2",
+    "inputSchema": {
+      "properties": {
+        "seller_id": {
+          "title": "Seller Id",
+          "type": "string"
+        },
+        "scroll_params": {
+          "default": "",
+          "title": "Scroll Params",
+          "type": "string"
+        },
+        "page_size": {
+          "default": 10,
+          "title": "Page Size",
+          "type": "integer"
+        },
+        "sort_field": {
+          "default": 1,
+          "title": "Sort Field",
+          "type": "integer"
+        },
+        "sort_order": {
+          "default": 0,
+          "title": "Sort Order",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "seller_id"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_product_list_v2Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_product_list_v2Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_shop_info",
+    "description": "获取商家信息数据/Get shop information data",
+    "inputSchema": {
+      "properties": {
+        "shop_id": {
+          "title": "Shop Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "shop_id"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_infoArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_infoOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_shop_product_category",
+    "description": "获取商家产品分类数据/Get shop product category data",
+    "inputSchema": {
+      "properties": {
+        "seller_id": {
+          "title": "Seller Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "seller_id"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_product_categoryArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_shop_product_categoryOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_live_daily_rank",
+    "description": "获取直播每日榜单数据/Get live daily rank data",
+    "inputSchema": {
+      "properties": {
+        "anchor_id": {
+          "default": "6952422426752205830",
+          "title": "Anchor Id",
+          "type": "string"
+        },
+        "room_id": {
+          "default": "7380221319910312750",
+          "title": "Room Id",
+          "type": "string"
+        },
+        "rank_type": {
+          "default": 8,
+          "title": "Rank Type",
+          "type": "integer"
+        },
+        "region_type": {
+          "default": 1,
+          "title": "Region Type",
+          "type": "integer"
+        },
+        "gap_interval": {
+          "default": 0,
+          "title": "Gap Interval",
+          "type": "integer"
+        },
+        "cookie": {
+          "default": "",
+          "title": "Cookie",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_app_v3_fetch_live_daily_rankArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_live_daily_rankOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_user_music_list",
+    "description": "获取用户音乐列表数据/Get user music list data",
+    "inputSchema": {
+      "properties": {
+        "sec_uid": {
+          "title": "Sec Uid",
+          "type": "string"
+        },
+        "cursor": {
+          "default": 0,
+          "title": "Cursor",
+          "type": "integer"
+        },
+        "count": {
+          "default": 10,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "sec_uid"
+      ],
+      "title": "tiktok_app_v3_fetch_user_music_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_user_music_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_content_translate",
+    "description": "获取内容翻译数据/Get content translation data",
+    "inputSchema": {
+      "properties": {
+        "trg_lang": {
+          "default": "zh-Hans",
+          "title": "Trg Lang",
+          "type": "string"
+        },
+        "src_content": {
+          "default": "Hello, welcome to TikHub!",
+          "title": "Src Content",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_app_v3_fetch_content_translateArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_content_translateOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_home_feed",
+    "description": "获取主页视频推荐数据/Get home feed(recommend) video data",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": "",
+          "title": "Cookie",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_app_v3_fetch_home_feedArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_home_feedOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_ttencrypt_algorithm",
+    "description": "TikTok APP加密算法/TikTok APP encryption algorithm",
+    "inputSchema": {
+      "properties": {
+        "url": {
+          "default": "https://api16-normal-useast5.tiktokv.us/tiktok/v1/upvote/item/list?user_id=6726034365602628610&offset=0&count=21&scene=0&iid=7425045478163400491&device_id=7349721034012280362&ac=WIFI&channel=googleplay&aid=1233&app_name=musical_ly&version_code=360704&version_name=36.7.4&device_platform=android&os=android&ab_version=36.7.4&ssmix=a&device_type=Pixel+6+Pro&device_brand=google&language=zh&os_api=33&os_version=13&openudid=711192517a8bbf03&manifest_version_code=2023607040&resolution=1440*2891&dpi=560&update_version_code=2023607040&_rticket=1728977220468&is_pad=0&app_type=normal&sys_region=CN&last_install_time=1728977141&timezone_name=America%2FLos_Angeles&app_language=zh-Hans&ac2=wifi5g&uoo=0&op_region=CN&timezone_offset=-28800&build_number=36.7.4&host_abi=arm64-v8a&locale=zh-Hans&region=CN&content_language=en%2C&ts=1728977220&cdid=aa21524b-8633-49ca-8e6e-3275fe1672db",
+          "title": "Url",
+          "type": "string"
+        },
+        "data": {
+          "default": "",
+          "title": "Data",
+          "type": "string"
+        },
+        "device_info": {
+          "additionalProperties": true,
+          "default": "{'aid': '1233', 'cdid': 'b820f79c-c74a-47b0-912f-ee3002ce60dc', 'channel': 'googleplay', 'cookies': {}, 'device_brand': 'HONOR', 'device_id': '7423364899755607598', 'device_manufacturer': 'HUAWEI', 'device_model': 'HONOR V30', 'device_platform': 'android', 'device_type': 'OXF-AN00', 'dpi': 480, 'host_abi': 'arm64-v8a', 'iid': '7423365134775469866', 'lanusk': '', 'manifest_version_code': '2023604040', 'mc': '7E:EE:BA:BC:5E:40', 'mssdk_token': '', 'openudid': '63401ab5140125d1', 'os_api': 29, 'os_version': '10', 'resolution': '2400*1080', 'rom': '11.0.0.185C00', 'rom_version': 'OXF-AN00-user 11.0.0 HUAWEIOXF-AN00 185-CHN-LGRP3 release-keys', 'server_time': 1728386909, 'ua': 'com.zhiliaoapp.musically/2023604040 (Linux; U; Android 10; zh_CN; OXF-AN00; Build/185-CHN-LGRP3;tt-ok/3.12.13.4-tiktok)', 'update_version_code': '2023604040', 'uuid': '350244698061054', 'version_code': '360404', 'version_name': '36.4.4'}",
+          "title": "Device Info",
+          "type": "object"
+        }
+      },
+      "title": "tiktok_app_v3_ttencrypt_algorithmArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_ttencrypt_algorithmOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_live_room_product_list",
+    "description": "获取直播间商品列表数据/Get live room product list data",
+    "inputSchema": {
+      "properties": {
+        "room_id": {
+          "title": "Room Id",
+          "type": "string"
+        },
+        "author_id": {
+          "title": "Author Id",
+          "type": "string"
+        },
+        "page_size": {
+          "default": 15,
+          "title": "Page Size",
+          "type": "integer"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        },
+        "cookie": {
+          "default": "",
+          "title": "Cookie",
+          "type": "string"
+        }
+      },
+      "required": [
+        "room_id",
+        "author_id"
+      ],
+      "title": "tiktok_app_v3_fetch_live_room_product_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_live_room_product_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_fetch_live_room_product_list_v2",
+    "description": "获取直播间商品列表数据 V2 /Get live room product list data V2",
+    "inputSchema": {
+      "properties": {
+        "room_id": {
+          "title": "Room Id",
+          "type": "string"
+        },
+        "author_id": {
+          "title": "Author Id",
+          "type": "string"
+        },
+        "page_size": {
+          "default": 15,
+          "title": "Page Size",
+          "type": "integer"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        },
+        "cookie": {
+          "default": "",
+          "title": "Cookie",
+          "type": "string"
+        }
+      },
+      "required": [
+        "room_id",
+        "author_id"
+      ],
+      "title": "tiktok_app_v3_fetch_live_room_product_list_v2Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_fetch_live_room_product_list_v2Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_add_video_play_count",
+    "description": "根据视频ID来增加作品的播放数/Increase the number of plays of the work according to the video ID",
+    "inputSchema": {
+      "properties": {
+        "aweme_type": {
+          "title": "Aweme Type",
+          "type": "integer"
+        },
+        "item_id": {
+          "title": "Item Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "aweme_type",
+        "item_id"
+      ],
+      "title": "tiktok_app_v3_add_video_play_countArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_add_video_play_countOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_encrypt_decrypt_login_request",
+    "description": "加密或解密 TikTok APP 登录请求体/Encrypt or Decrypt TikTok APP login request body",
+    "inputSchema": {
+      "properties": {
+        "username": {
+          "default": "example_username",
+          "title": "Username",
+          "type": "string"
+        },
+        "password": {
+          "default": "example_password",
+          "title": "Password",
+          "type": "string"
+        },
+        "mode": {
+          "default": null,
+          "title": "Mode",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_app_v3_encrypt_decrypt_login_requestArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_encrypt_decrypt_login_requestOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_open_tiktok_app_to_video_detail",
+    "description": "生成TikTok分享链接，唤起TikTok APP，跳转指定作品详情页/Generate TikTok share link, call TikTok APP, and jump to the specified video details page",
+    "inputSchema": {
+      "properties": {
+        "aweme_id": {
+          "title": "Aweme Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "aweme_id"
+      ],
+      "title": "tiktok_app_v3_open_tiktok_app_to_video_detailArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_open_tiktok_app_to_video_detailOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_open_tiktok_app_to_user_profile",
+    "description": "生成TikTok分享链接，唤起TikTok APP，跳转指定用户主页/Generate TikTok share link, call TikTok APP, and jump to the specified user profile",
+    "inputSchema": {
+      "properties": {
+        "uid": {
+          "title": "Uid",
+          "type": "string"
+        }
+      },
+      "required": [
+        "uid"
+      ],
+      "title": "tiktok_app_v3_open_tiktok_app_to_user_profileArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_open_tiktok_app_to_user_profileOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_open_tiktok_app_to_keyword_search",
+    "description": "生成TikTok分享链接，唤起TikTok APP，跳转指定关键词搜索结果/Generate TikTok share link, call TikTok APP, and jump to the specified keyword search result",
+    "inputSchema": {
+      "properties": {
+        "keyword": {
+          "title": "Keyword",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "title": "tiktok_app_v3_open_tiktok_app_to_keyword_searchArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_open_tiktok_app_to_keyword_searchOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_app_v3_open_tiktok_app_to_send_private_message",
+    "description": "生成TikTok分享链接，唤起TikTok APP，给指定用户发送私信/Generate TikTok share link, call TikTok APP, and send private messages to specified users",
+    "inputSchema": {
+      "properties": {
+        "uid": {
+          "title": "Uid",
+          "type": "string"
+        }
+      },
+      "required": [
+        "uid"
+      ],
+      "title": "tiktok_app_v3_open_tiktok_app_to_send_private_messageArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_app_v3_open_tiktok_app_to_send_private_messageOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_ads_get_ads_detail",
+    "description": "获取单个广告详情/Get single ad detail",
+    "inputSchema": {
+      "properties": {
+        "ads_id": {
+          "title": "Ads Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ads_id"
+      ],
+      "title": "tiktok_ads_get_ads_detailArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_ads_get_ads_detailOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_ads_search_ads",
+    "description": "搜索广告/Search ads",
+    "inputSchema": {
+      "properties": {
+        "objective": {
+          "default": 1,
+          "title": "Objective",
+          "type": "integer"
+        },
+        "like": {
+          "default": 1,
+          "title": "Like",
+          "type": "integer"
+        },
+        "period": {
+          "default": 180,
+          "title": "Period",
+          "type": "integer"
+        },
+        "industry": {
+          "default": null,
+          "title": "Industry",
+          "type": "string"
+        },
+        "keyword": {
+          "default": null,
+          "title": "Keyword",
+          "type": "string"
+        },
+        "page": {
+          "default": 1,
+          "title": "Page",
+          "type": "integer"
+        },
+        "limit": {
+          "default": 20,
+          "title": "Limit",
+          "type": "integer"
+        },
+        "order_by": {
+          "default": "for_you",
+          "title": "Order By",
+          "type": "string"
+        },
+        "country_code": {
+          "default": "US",
+          "title": "Country Code",
+          "type": "string"
+        },
+        "ad_format": {
+          "default": 1,
+          "title": "Ad Format",
+          "type": "integer"
+        },
+        "ad_language": {
+          "default": "en",
+          "title": "Ad Language",
+          "type": "string"
+        },
+        "search_id": {
+          "default": null,
+          "title": "Search Id",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_ads_search_adsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_ads_search_adsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_ads_get_top_ads_spotlight",
+    "description": "获取热门广告聚光灯/Get top ads spotlight",
+    "inputSchema": {
+      "properties": {
+        "industry": {
+          "default": null,
+          "title": "Industry",
+          "type": "string"
+        },
+        "page": {
+          "default": 1,
+          "title": "Page",
+          "type": "integer"
+        },
+        "limit": {
+          "default": 20,
+          "title": "Limit",
+          "type": "integer"
+        }
+      },
+      "title": "tiktok_ads_get_top_ads_spotlightArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_ads_get_top_ads_spotlightOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_ads_get_ad_keyframe_analysis",
+    "description": "获取广告关键帧分析/Get ad keyframe analysis",
+    "inputSchema": {
+      "properties": {
+        "material_id": {
+          "title": "Material Id",
+          "type": "string"
+        },
+        "metric": {
+          "default": "retain_ctr",
+          "title": "Metric",
+          "type": "string"
+        }
+      },
+      "required": [
+        "material_id"
+      ],
+      "title": "tiktok_ads_get_ad_keyframe_analysisArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_ads_get_ad_keyframe_analysisOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_ads_get_ad_percentile",
+    "description": "获取广告百分位数据/Get ad percentile data",
+    "inputSchema": {
+      "properties": {
+        "material_id": {
+          "title": "Material Id",
+          "type": "string"
+        },
+        "metric": {
+          "default": "ctr_percentile",
+          "title": "Metric",
+          "type": "string"
+        },
+        "period_type": {
+          "default": 180,
+          "title": "Period Type",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "material_id"
+      ],
+      "title": "tiktok_ads_get_ad_percentileArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_ads_get_ad_percentileOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_ads_get_ad_interactive_analysis",
+    "description": "获取广告互动分析/Get ad interactive analysis",
+    "inputSchema": {
+      "properties": {
+        "material_id": {
+          "title": "Material Id",
+          "type": "string"
+        },
+        "metric_type": {
+          "default": "remain",
+          "title": "Metric Type",
+          "type": "string"
+        },
+        "period_type": {
+          "default": 180,
+          "title": "Period Type",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "material_id"
+      ],
+      "title": "tiktok_ads_get_ad_interactive_analysisArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_ads_get_ad_interactive_analysisOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_ads_get_recommended_ads",
+    "description": "获取推荐广告/Get recommended ads",
+    "inputSchema": {
+      "properties": {
+        "material_id": {
+          "title": "Material Id",
+          "type": "string"
+        },
+        "industry": {
+          "default": "25308000000",
+          "title": "Industry",
+          "type": "string"
+        },
+        "country_code": {
+          "default": "US",
+          "title": "Country Code",
+          "type": "string"
+        }
+      },
+      "required": [
+        "material_id"
+      ],
+      "title": "tiktok_ads_get_recommended_adsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_ads_get_recommended_adsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_ads_get_query_suggestions",
+    "description": "获取查询建议/Get query suggestions",
+    "inputSchema": {
+      "properties": {
+        "query": {
+          "default": null,
+          "title": "Query",
+          "type": "string"
+        },
+        "count": {
+          "default": 50,
+          "title": "Count",
+          "type": "integer"
+        },
+        "scenario": {
+          "default": 1,
+          "title": "Scenario",
+          "type": "integer"
+        },
+        "country_code": {
+          "default": "US",
+          "title": "Country Code",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_ads_get_query_suggestionsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_ads_get_query_suggestionsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_ads_get_configure_safety",
+    "description": "获取搜索板块配置/Get search modules config",
+    "inputSchema": {
+      "properties": {},
+      "title": "tiktok_ads_get_configure_safetyArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_ads_get_configure_safetyOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_ads_get_location_list",
+    "description": "获取支持的国家地区列表/Get supported location list",
+    "inputSchema": {
+      "properties": {},
+      "title": "tiktok_ads_get_location_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_ads_get_location_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_ads_get_trends_hashtag_list",
+    "description": "获取热门标签榜单(趋势)/Get trending hashtag list",
+    "inputSchema": {
+      "properties": {
+        "time_range": {
+          "default": 7,
+          "title": "Time Range",
+          "type": "integer"
+        },
+        "country_code": {
+          "default": "US",
+          "title": "Country Code",
+          "type": "string"
+        },
+        "page": {
+          "default": 1,
+          "title": "Page",
+          "type": "integer"
+        },
+        "limit": {
+          "default": 20,
+          "title": "Limit",
+          "type": "integer"
+        },
+        "industry_id": {
+          "default": null,
+          "title": "Industry Id",
+          "type": "integer"
+        }
+      },
+      "title": "tiktok_ads_get_trends_hashtag_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_ads_get_trends_hashtag_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_ads_get_trends_hashtag_detail",
+    "description": "获取热门标签详情(趋势)/Get trending hashtag detail",
+    "inputSchema": {
+      "properties": {
+        "hashtag_id": {
+          "title": "Hashtag Id",
+          "type": "string"
+        },
+        "time_range": {
+          "default": 90,
+          "title": "Time Range",
+          "type": "integer"
+        },
+        "country_code": {
+          "default": "US",
+          "title": "Country Code",
+          "type": "string"
+        }
+      },
+      "required": [
+        "hashtag_id"
+      ],
+      "title": "tiktok_ads_get_trends_hashtag_detailArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_ads_get_trends_hashtag_detailOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_creator_get_account_health_status",
+    "description": "获取创作者账号健康状态/Get Creator Account Health Status",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": "Your_Cookie_String",
+          "title": "Cookie",
+          "type": "string"
+        },
+        "proxy": {
+          "default": "",
+          "title": "Proxy",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_creator_get_account_health_statusArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_creator_get_account_health_statusOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_creator_get_account_violation_list",
+    "description": "获取创作者账号违规记录列表/Get Creator Account Violation Record List",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": "Your_Cookie_String",
+          "title": "Cookie",
+          "type": "string"
+        },
+        "proxy": {
+          "default": "",
+          "title": "Proxy",
+          "type": "string"
+        },
+        "page": {
+          "default": 1,
+          "title": "Page",
+          "type": "integer"
+        }
+      },
+      "title": "tiktok_creator_get_account_violation_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_creator_get_account_violation_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_creator_get_account_insights_overview",
+    "description": "获取创作者账号概览/Get Creator Account Overview",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": "Your_Cookie_String",
+          "title": "Cookie",
+          "type": "string"
+        },
+        "proxy": {
+          "default": "",
+          "title": "Proxy",
+          "type": "string"
+        },
+        "start_date": {
+          "default": "04-01-2025",
+          "title": "Start Date",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_creator_get_account_insights_overviewArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_creator_get_account_insights_overviewOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_creator_get_live_analytics_summary",
+    "description": "获取创作者直播概览/Get Creator Live Overview",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": "Your_Cookie_String",
+          "title": "Cookie",
+          "type": "string"
+        },
+        "proxy": {
+          "default": "",
+          "title": "Proxy",
+          "type": "string"
+        },
+        "start_date": {
+          "default": "04-01-2025",
+          "title": "Start Date",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_creator_get_live_analytics_summaryArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_creator_get_live_analytics_summaryOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_creator_get_video_analytics_summary",
+    "description": "获取创作者视频概览/Get Creator Video Overview",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": "Your_Cookie_String",
+          "title": "Cookie",
+          "type": "string"
+        },
+        "proxy": {
+          "default": "",
+          "title": "Proxy",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_creator_get_video_analytics_summaryArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_creator_get_video_analytics_summaryOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_creator_get_video_list_analytics",
+    "description": "获取创作者视频列表分析/Get Creator Video List Analytics",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": "Your_Cookie_String",
+          "title": "Cookie",
+          "type": "string"
+        },
+        "proxy": {
+          "default": "",
+          "title": "Proxy",
+          "type": "string"
+        },
+        "start_date": {
+          "default": "04-01-2025",
+          "title": "Start Date",
+          "type": "string"
+        },
+        "page": {
+          "default": 0,
+          "title": "Page",
+          "type": "integer"
+        },
+        "rules": {
+          "default": "VIDEO_LIST_PUBLISH_TIME",
+          "title": "Rules",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_creator_get_video_list_analyticsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_creator_get_video_list_analyticsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_creator_get_product_analytics_list",
+    "description": "获取创作者商品列表分析/Get Creator Product List Analytics",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": "Your_Cookie_String",
+          "title": "Cookie",
+          "type": "string"
+        },
+        "proxy": {
+          "default": "",
+          "title": "Proxy",
+          "type": "string"
+        },
+        "start_date": {
+          "default": "2025-04-01",
+          "title": "Start Date",
+          "type": "string"
+        },
+        "end_date": {
+          "default": "2025-05-01",
+          "title": "End Date",
+          "type": "string"
+        },
+        "page": {
+          "default": 0,
+          "title": "Page",
+          "type": "integer"
+        }
+      },
+      "title": "tiktok_creator_get_product_analytics_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_creator_get_product_analytics_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_creator_get_creator_account_info",
+    "description": "获取创作者账号信息/Get Creator Account Info",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": "Your_Cookie_String",
+          "title": "Cookie",
+          "type": "string"
+        },
+        "proxy": {
+          "default": "",
+          "title": "Proxy",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_creator_get_creator_account_infoArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_creator_get_creator_account_infoOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_creator_get_showcase_product_list",
+    "description": "获取橱窗商品列表/Get Showcase Product List",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": "Your_Cookie_String",
+          "title": "Cookie",
+          "type": "string"
+        },
+        "proxy": {
+          "default": "",
+          "title": "Proxy",
+          "type": "string"
+        },
+        "count": {
+          "default": 20,
+          "title": "Count",
+          "type": "integer"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        }
+      },
+      "title": "tiktok_creator_get_showcase_product_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_creator_get_showcase_product_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_creator_get_video_associated_product_list",
+    "description": "获取视频关联商品列表/Get Video Associated Product List",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": "Your_Cookie_String",
+          "title": "Cookie",
+          "type": "string"
+        },
+        "proxy": {
+          "default": "",
+          "title": "Proxy",
+          "type": "string"
+        },
+        "start_date": {
+          "default": "04-01-2025",
+          "title": "Start Date",
+          "type": "string"
+        },
+        "item_ids": {
+          "items": {},
+          "title": "Item Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "item_ids"
+      ],
+      "title": "tiktok_creator_get_video_associated_product_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_creator_get_video_associated_product_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_creator_get_video_detailed_stats",
+    "description": "获取视频详细分段统计数据/Get Video Detailed Statistics",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": "Your_Cookie_String",
+          "title": "Cookie",
+          "type": "string"
+        },
+        "proxy": {
+          "default": "",
+          "title": "Proxy",
+          "type": "string"
+        },
+        "start_date": {
+          "default": "04-01-2025",
+          "title": "Start Date",
+          "type": "string"
+        },
+        "item_id": {
+          "title": "Item Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "item_id"
+      ],
+      "title": "tiktok_creator_get_video_detailed_statsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_creator_get_video_detailed_statsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_creator_get_video_to_product_stats",
+    "description": "获取视频与商品关联统计数据/Get Video-Product Association Statistics",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": "Your_Cookie_String",
+          "title": "Cookie",
+          "type": "string"
+        },
+        "proxy": {
+          "default": "",
+          "title": "Proxy",
+          "type": "string"
+        },
+        "start_date": {
+          "default": "04-01-2025",
+          "title": "Start Date",
+          "type": "string"
+        },
+        "item_id": {
+          "title": "Item Id",
+          "type": "string"
+        },
+        "product_id": {
+          "title": "Product Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "item_id",
+        "product_id"
+      ],
+      "title": "tiktok_creator_get_video_to_product_statsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_creator_get_video_to_product_statsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_creator_get_product_related_videos",
+    "description": "获取同款商品关联视频/Get Product Related Videos",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": "Your_Cookie_String",
+          "title": "Cookie",
+          "type": "string"
+        },
+        "proxy": {
+          "default": "",
+          "title": "Proxy",
+          "type": "string"
+        },
+        "start_date": {
+          "default": "04-01-2025",
+          "title": "Start Date",
+          "type": "string"
+        },
+        "item_id": {
+          "title": "Item Id",
+          "type": "string"
+        },
+        "product_id": {
+          "title": "Product Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "item_id",
+        "product_id"
+      ],
+      "title": "tiktok_creator_get_product_related_videosArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_creator_get_product_related_videosOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_creator_get_video_audience_stats",
+    "description": "获取视频受众分析数据/Get Video Audience Analysis Data",
+    "inputSchema": {
+      "properties": {
+        "cookie": {
+          "default": "Your_Cookie_String",
+          "title": "Cookie",
+          "type": "string"
+        },
+        "proxy": {
+          "default": "",
+          "title": "Proxy",
+          "type": "string"
+        },
+        "start_date": {
+          "default": "04-01-2025",
+          "title": "Start Date",
+          "type": "string"
+        },
+        "item_id": {
+          "title": "Item Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "item_id"
+      ],
+      "title": "tiktok_creator_get_video_audience_statsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_creator_get_video_audience_statsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_shop_web_fetch_product_detail",
+    "description": "获取商品详情V1(桌面端-数据完整)/Get product detail V1(Full data)",
+    "inputSchema": {
+      "properties": {
+        "product_id": {
+          "title": "Product Id",
+          "type": "string"
+        },
+        "seller_id": {
+          "default": "",
+          "title": "Seller Id",
+          "type": "string"
+        },
+        "region": {
+          "default": "MY",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_id"
+      ],
+      "title": "tiktok_shop_web_fetch_product_detailArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_shop_web_fetch_product_detailOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_shop_web_fetch_product_detail_v2",
+    "description": "获取商品详情V2(移动端-数据少)/Get product detail V2 (Less Data)",
+    "inputSchema": {
+      "properties": {
+        "product_id": {
+          "title": "Product Id",
+          "type": "string"
+        },
+        "seller_id": {
+          "default": "",
+          "title": "Seller Id",
+          "type": "string"
+        },
+        "region": {
+          "default": "MY",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_id"
+      ],
+      "title": "tiktok_shop_web_fetch_product_detail_v2Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_shop_web_fetch_product_detail_v2Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_shop_web_fetch_product_detail_v3",
+    "description": "获取商品详情V3(移动端-数据完整)/Get product detail V3 (Full Data)",
+    "inputSchema": {
+      "properties": {
+        "product_id": {
+          "title": "Product Id",
+          "type": "string"
+        },
+        "region": {
+          "default": "SG",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_id"
+      ],
+      "title": "tiktok_shop_web_fetch_product_detail_v3Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_shop_web_fetch_product_detail_v3Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_shop_web_fetch_product_reviews_v2",
+    "description": "获取商品评论V2/Get product reviews V2",
+    "inputSchema": {
+      "properties": {
+        "product_id": {
+          "title": "Product Id",
+          "type": "string"
+        },
+        "page_start": {
+          "default": 1,
+          "title": "Page Start",
+          "type": "integer"
+        },
+        "sort_rule": {
+          "default": 2,
+          "title": "Sort Rule",
+          "type": "integer"
+        },
+        "filter_type": {
+          "default": 1,
+          "title": "Filter Type",
+          "type": "integer"
+        },
+        "filter_value": {
+          "default": 6,
+          "title": "Filter Value",
+          "type": "integer"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_id"
+      ],
+      "title": "tiktok_shop_web_fetch_product_reviews_v2Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_shop_web_fetch_product_reviews_v2Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_shop_web_fetch_seller_products_list",
+    "description": "获取商家商品列表V1/Get seller products list V1",
+    "inputSchema": {
+      "properties": {
+        "seller_id": {
+          "title": "Seller Id",
+          "type": "string"
+        },
+        "search_params": {
+          "default": "",
+          "title": "Search Params",
+          "type": "string"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "seller_id"
+      ],
+      "title": "tiktok_shop_web_fetch_seller_products_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_shop_web_fetch_seller_products_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_shop_web_fetch_seller_products_list_v2",
+    "description": "获取商家商品列表V2(移动端)/Get seller products list V2 (Mobile)",
+    "inputSchema": {
+      "properties": {
+        "seller_id": {
+          "title": "Seller Id",
+          "type": "string"
+        },
+        "searchParams": {
+          "default": "",
+          "title": "Searchparams",
+          "type": "string"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "seller_id"
+      ],
+      "title": "tiktok_shop_web_fetch_seller_products_list_v2Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_shop_web_fetch_seller_products_list_v2Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_shop_web_fetch_search_word_suggestion_v2",
+    "description": "获取搜索关键词建议V2(移动端)/Get search keyword suggestions V2 (Mobile)",
+    "inputSchema": {
+      "properties": {
+        "search_word": {
+          "title": "Search Word",
+          "type": "string"
+        },
+        "lang": {
+          "default": "en-US",
+          "title": "Lang",
+          "type": "string"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "search_word"
+      ],
+      "title": "tiktok_shop_web_fetch_search_word_suggestion_v2Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_shop_web_fetch_search_word_suggestion_v2Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_shop_web_fetch_search_products_list",
+    "description": "搜索商品列表V1/Search products list V1",
+    "inputSchema": {
+      "properties": {
+        "search_word": {
+          "title": "Search Word",
+          "type": "string"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "page_token": {
+          "default": "",
+          "title": "Page Token",
+          "type": "string"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "search_word"
+      ],
+      "title": "tiktok_shop_web_fetch_search_products_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_shop_web_fetch_search_products_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_shop_web_fetch_search_products_list_v2",
+    "description": "搜索商品列表V2(移动端)/Search products list V2 (Mobile)",
+    "inputSchema": {
+      "properties": {
+        "search_word": {
+          "title": "Search Word",
+          "type": "string"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "page_token": {
+          "default": "",
+          "title": "Page Token",
+          "type": "string"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "search_word"
+      ],
+      "title": "tiktok_shop_web_fetch_search_products_list_v2Arguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_shop_web_fetch_search_products_list_v2Output",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_shop_web_fetch_products_category_list",
+    "description": "获取商品分类列表/Get product category list",
+    "inputSchema": {
+      "properties": {
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "title": "tiktok_shop_web_fetch_products_category_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_shop_web_fetch_products_category_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_shop_web_fetch_products_by_category_id",
+    "description": "根据分类ID获取商品列表/Get products by category ID",
+    "inputSchema": {
+      "properties": {
+        "category_id": {
+          "title": "Category Id",
+          "type": "integer"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "category_id"
+      ],
+      "title": "tiktok_shop_web_fetch_products_by_category_idArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_shop_web_fetch_products_by_category_idOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_shop_web_fetch_hot_selling_products_list",
+    "description": "获取热卖商品列表/Get hot selling products list",
+    "inputSchema": {
+      "properties": {
+        "region": {
+          "default": "US",
+          "title": "Region",
+          "type": "string"
+        },
+        "count": {
+          "default": 100,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "title": "tiktok_shop_web_fetch_hot_selling_products_listArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_shop_web_fetch_hot_selling_products_listOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_analytics_fetch_video_metrics",
+    "description": "获取作品的统计数据/Get video metrics",
+    "inputSchema": {
+      "properties": {
+        "item_id": {
+          "title": "Item Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "item_id"
+      ],
+      "title": "tiktok_analytics_fetch_video_metricsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_analytics_fetch_video_metricsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_analytics_detect_fake_views",
+    "description": "检测视频虚假流量分析/Detect fake views in video",
+    "inputSchema": {
+      "properties": {
+        "item_id": {
+          "title": "Item Id",
+          "type": "string"
+        },
+        "content_category": {
+          "default": "default",
+          "title": "Content Category",
+          "type": "string"
+        }
+      },
+      "required": [
+        "item_id"
+      ],
+      "title": "tiktok_analytics_detect_fake_viewsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_analytics_detect_fake_viewsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_analytics_fetch_comment_keywords",
+    "description": "获取视频评论关键词分析/Get comment keywords analysis",
+    "inputSchema": {
+      "properties": {
+        "item_id": {
+          "title": "Item Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "item_id"
+      ],
+      "title": "tiktok_analytics_fetch_comment_keywordsArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_analytics_fetch_comment_keywordsOutput",
+      "type": "object"
+    }
+  },
+  {
+    "name": "tiktok_analytics_fetch_creator_info_and_milestones",
+    "description": "获取创作者信息和里程碑数据/Get creator info and milestones",
+    "inputSchema": {
+      "properties": {
+        "user_id": {
+          "title": "User Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "user_id"
+      ],
+      "title": "tiktok_analytics_fetch_creator_info_and_milestonesArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "result": {
+          "title": "Result",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "tiktok_analytics_fetch_creator_info_and_milestonesOutput",
+      "type": "object"
+    }
+  }
+]
