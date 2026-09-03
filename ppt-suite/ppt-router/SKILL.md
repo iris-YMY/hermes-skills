@@ -1,6 +1,6 @@
 ---
 name: ppt-router
-description: PPT/Deck 生产流水线统一入口与路由（曾分拆为 ppt-workflow / ppt-production-qa / ppt-delivery / consulting-deck-strategist / presentation-visual-director / ecommerce-proposal-ppt，已并入本 skill 的 references/）。任何 PPT/Deck 相关请求（制作、创建、生成、改造、优化、模板、图片稿、咨询 deck、提案 PPT、视觉锁、代表页审核、验收、交付）都先经本 skill 判定流向，再交给对应生产/策略路径。决策链：①商业问题/证据/结论/故事线是否明确 → 策略层（consulting blueprint）；②是否需要代表页审核或逐页视觉锁 → 协调层（visual-lock workflow）；③其余直达 ppt-master 统一 Production Router。策略、协调、视觉指导、QA 验收、交付规范、TP 提案改造的完整 SOP 见 references/。
+description: PPT/Deck 生产流水线统一入口与路由（曾分拆为 ppt-workflow / ppt-production-qa / ppt-delivery / consulting-deck-strategist / presentation-visual-director / ecommerce-proposal-ppt，已并入本 skill 的 references/）。任何 PPT/Deck 相关请求（制作、创建、生成、改造、优化、模板、图片稿、咨询 deck、提案 PPT、视觉锁、代表页审核、验收、交付）都先经本 skill 判定流向，再交给对应生产/策略路径。决策链：①商业问题/证据/结论/故事线是否明确 → 策略层（consulting blueprint）；②是否需要代表页审核或逐页视觉锁 → 协调层（visual-lock workflow）；③其余直达 ppt-master 统一 Production Router。美学导向 deck（品牌发布/产品发布/营销创意/杂志感/视觉冲击）分流至 huashu-design（HTML 原生设计路线），商务 consulting deck 仍走 ppt-master（PPTX 原生路线）。策略、协调、视觉指导、QA 验收、交付规范、TP 提案改造的完整 SOP 见 references/。
 ---
 
 # PPT / Deck 任务顶层路由
@@ -13,32 +13,50 @@ PPT 任务全流程的唯一入口。任何 PPT/Deck 请求先经本路由判定
 PPT / Deck 任务
   │
   ▼
+【决策0】美学属性判断（consulting-deck-strategist 的风格确认关口）
+  ├─ 美学导向 deck（品牌发布/产品发布/营销创意/杂志感/视觉冲击）
+  │     → huashu-design（HTML 原生设计路线，blueprint 逻辑层成果作为输入）
+  └─ 商务 consulting deck（咨询/战略/商业计划/数据分析）→ 继续走 PPTX 原生路线
+  │
+  ▼
 【决策1】商业问题、证据、结论与故事线是否明确？
   ├─ 是 → 直接进入【决策2】
   └─ 否 → consulting-deck-strategist
-              │  产出：商业逻辑 • Storyline • 页面 Blueprint
-              │        Proof Object • Visual Mother Concept
-              ▼
+  │             产出：商业逻辑 • Storyline • 页面 Blueprint
+  │                   Proof Object • Visual Mother Concept
+  │              ▼
 【决策2】是否需要代表页审核或逐页视觉锁？
-  ├─ 需要 → ppt-workflow（可选协调层）
+  ├─ 需要 → ppt-workflow（协调层，视觉锁必经关卡）
   │          确认节点 • 状态管理 • Handoff → 交给 ppt-master
   └─ 不需要 / 已有成熟模板 → 直接进入 ppt-master
-              │
-              ▼
+  │
+  ▼
   ppt-master（统一 Production Router）
     ├─ 新建可编辑 PPTX → Generate Editable PPTX
     ├─ 创建品牌模板 → Create Native Template
     ├─ 填充现有模板 → Fill Native PPTX
     ├─ 优化现有 PPTX → Enhance Native PPTX
     └─ 整页图片交付 → Full-slide Image（rw-consulting-ppt + image_gen）
-              │
-              ▼
+  │
+  ▼
   ppt-production-qa（统一验收）
     ├─ 通过 → 正式交付（ppt-delivery：命名/归档/上传确认/版本管理）
     └─ 未通过 → 返回 ppt-master 修正对应 Production Format
 ```
 
+### 小改快速通道（改动 ≤3 页）
+
+改动 ≤3 页、内容级编辑（数据/文案/换图/版式微调）且视觉权威已批准时，代表页审核压缩为一次确认：出稿 → 确认 → 锁定。确认返回修改意见则退出快速通道，转完整审核。快速通道是审核循环的压缩，不是豁免——不出稿、不确认、不锁定，小改永远不会自动跳过关卡。
+
 ## 判定细则
+
+### 决策0：美学属性判断（consulting-deck-strategist 风格确认关口）
+
+| 条件 | 流向 |
+|---|---|
+| 美学导向 deck：品牌发布/产品发布/营销创意/杂志感/视觉冲击/HTML 原生设计 | huashu-design（HTML 原生设计路线） |
+| 商务 consulting deck：咨询/战略/商业计划/数据分析/汇报材料 | 继续走 PPTX 原生路线（ppt-master） |
+| 跨层美学引用：商务路线美学判断阶段可引用 huashu-design 的美学层（design-styles/typography）做方向探索 | 色板→主题色、字体→字体栈、布局→版式；HTML 专属特效不进 PPTX |
 
 ### 决策1：策略层是否需要介入
 
@@ -52,7 +70,7 @@ PPT / Deck 任务
 
 | 条件 | 流向 |
 |---|---|
-| 需要代表页审核（先出代表页确认风格再批量）或逐页视觉锁（每页都要视觉确认） | ppt-workflow |
+| 需要代表页审核（先出代表页确认风格再批量）或逐页视觉锁（每页都要视觉确认） | ppt-workflow（视觉锁是商务路线必经关卡，即使有成熟模板也须执行，模板仅作 style authority） |
 | 不需要审核 / 已有成熟模板 / 用户要求快速出稿 | 直接 ppt-master |
 
 ### Production Format 判定（进入 ppt-master 后）
@@ -76,6 +94,13 @@ PPT / Deck 任务
 
 - 无任何 skill 匹配时使用 powerpoint（纯兜底，简单 PPTX 操作）
 - ecommerce-proposal-ppt 是 TP 品牌提案专用改造流程（触发词：PPT review / 把XX提案改成XX品牌），命中时优先走它
+- huashu-design：美学导向 deck 的 HTML 原生设计路线（触发词：品牌发布/产品发布/营销创意/杂志感/视觉冲击/HTML deck）。本环境已安装，见 `skill_view(name='huashu-design')`。
+- guizang-pptx-skill 与 rw-consulting-ppt 属于历史兼容路线，不作为核心路由；不得从 consulting-deck-strategist 绕过 ppt-master 直接进入它们。
+
+## 生产执行笔记（必经必读）
+
+- 进入 ppt-master 的 Visual Construction / 导出 / 图表生成阶段前，**必读 `pptx-production-playbook`**（agent 自有生产经验：spec_lock 契约、质量门顺序、LibreOffice 渲染验收、品牌模板复刻、压字防间距标准）。
+- **PPT 内任何数据图表默认实现 = lieflat 法典**（§7.3 选型 SOP）：判数据形状 → 翻 lieflat catalog 锁图型 → 读 gallery 真模板 → 静态 SVG → svg_to_pptx。禁止临场自由发挥画图。lieflat-charts 已升级上游最新版（63 图型 + R01–R12 报告模板），用法见 playbook references/lieflat-visual-into-ppt.md。
 
 ---
 
